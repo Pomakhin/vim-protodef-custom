@@ -264,7 +264,7 @@ endfunction
 function! protodef#MakeMapping()
     if !exists('g:disable_protodef_mapping')
         nmap <buffer> <silent> <leader>pp :set paste<cr>i<c-r>=protodef#ReturnSkeletonsFromPrototypesForCurrentBuffer({})<cr><esc>='[:set nopaste<cr>
-        nmap <buffer> <silent> <leader>PN :set paste<cr>i<c-r>=protodef#ReturnSkeletonsFromPrototypesForCurrentBuffer({'includeNS' : 0})<cr><esc>='[:set nopaste<cr>
+        nmap <buffer> <silent> <leader>pl :set paste<cr>i<c-r>=protodef#ReturnSkeletonsFromPrototypesForCurrentBuffer({'includeNS' : 0})<cr><esc>='[:set nopaste<cr>
     endif
 endfunction
 
