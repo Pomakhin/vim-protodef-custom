@@ -62,7 +62,7 @@ ProtoDef has the following features:
 A mapping is made for you that is local to the buffer in the C++
 implementation file called:
 >
-	nmap <buffer> <silent> <leader> ,PP
+	nmap <buffer> <silent> <leader> ,pp
 <
 So all you have to do is simply hit {<leader>PP} on a line in the
 implementation file and you will get the definitions put in at that spot.
@@ -70,7 +70,7 @@ implementation file and you will get the definitions put in at that spot.
 Another mapping is included to generate prototypes without the namespace
 definition as well:
 >
-	nmap <buffer> <silent> <leader> ,PN
+	nmap <buffer> <silent> <leader> ,pl
 <
 
 ==============================================================================
