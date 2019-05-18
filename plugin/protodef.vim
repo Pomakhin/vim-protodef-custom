@@ -37,7 +37,7 @@ endif
 " The flags we're using for ctags.  I wouldn't change these if I were you - the
 " code depends on the output of ctags and if you change these, the code's
 " probably going to throw up all kinds of interesting errors.
-let g:protodef_ctags_flags = '--language-force=c++ --c++-kinds=+p-cdefglmnstuvx --fields=nsm -o -'
+let g:protodef_ctags_flags = '-u --language-force=c++ --c++-kinds=+p-cdefglmnstuvx --fields=nsm -o -'
 
 " The path to the pullproto.pl script that's included as part of protodef
 if !exists('g:protodefprotogetter')
@@ -182,8 +182,8 @@ function! s:GetFunctionPrototypesForCurrentBuffer(opts)
         " Make a stab at sorting the prototypes a bit by trying to put the
         " constructors and destructors at the top with free functions at the
         " bottom - everything else goes in between these bits.
-        if !exists('g:disable_protodef_sorting')
-            let ret = sort(ret, "s:PrototypeSortCompare")
+        " if !exists('g:disable_protodef_sorting')
+        "    let ret = sort(ret, "s:PrototypeSortCompare")
         endif
         return ret
     endif
